@@ -1,0 +1,33 @@
+<%= form_for(@discount_activity) do |f| %>
+  <% if @discount_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@discount_activity.errors.count, "error") %> prohibited this discount_activity from being saved:</h2>
+
+      <ul>
+      <% @discount_activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :discount_id %><br>
+    <%= f.number_field :discount_id %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_type_id %><br>
+    <%= f.number_field :activity_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

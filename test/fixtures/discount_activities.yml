@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  discount_id: 1
+  activity_type_id: 1
+  date: 2017-10-12
+  time: 2017-10-12 19:51:12
+
+two:
+  discount_id: 1
+  activity_type_id: 1
+  date: 2017-10-12
+  time: 2017-10-12 19:51:12

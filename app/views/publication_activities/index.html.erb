@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Publication Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Publication</th>
+      <th>Activity type</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publication_activities.each do |publication_activity| %>
+      <tr>
+        <td><%= publication_activity.publication_id %></td>
+        <td><%= publication_activity.activity_type.name %></td>
+        <td><%= publication_activity.date %></td>
+        <td><%= publication_activity.time %></td>
+        <td><%= link_to 'Show', publication_activity %></td>
+        <td><%= link_to 'Edit', edit_publication_activity_path(publication_activity) %></td>
+        <td><%= link_to 'Destroy', publication_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication activity', new_publication_activity_path %>

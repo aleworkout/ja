@@ -1,0 +1,2 @@
+module PublicationActivitiesHelper
+end

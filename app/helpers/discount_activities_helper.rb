@@ -1,0 +1,2 @@
+module DiscountActivitiesHelper
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Discount Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Discount</th>
+      <th>Activity type</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discount_activities.each do |discount_activity| %>
+      <tr>
+        <td><%= discount_activity.discount_id %></td>
+        <td><%= discount_activity.activity_type.name %></td>
+        <td><%= discount_activity.date %></td>
+        <td><%= discount_activity.time %></td>
+        <td><%= link_to 'Show', discount_activity %></td>
+        <td><%= link_to 'Edit', edit_discount_activity_path(discount_activity) %></td>
+        <td><%= link_to 'Destroy', discount_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Discount activity', new_discount_activity_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @discount_activity.discount_id %>
+</p>
+
+<p>
+  <strong>Activity type:</strong>
+  <%= @discount_activity.activity_type_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @discount_activity.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @discount_activity.time %>
+</p>
+
+<%= link_to 'Edit', edit_discount_activity_path(@discount_activity) %> |
+<%= link_to 'Back', discount_activities_path %>
