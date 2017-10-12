@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Comment</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= publication.title %></td>
         <td><%= publication.comment %></td>
+        <td><img src="<%= publication.img %>" /></td>
         <td><%= link_to 'Show', publication %></td>
         <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
         <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
